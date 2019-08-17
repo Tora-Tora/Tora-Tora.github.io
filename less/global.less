@@ -1,9 +1,9 @@
 * {
   box-sizing: border-box;
-  border: 1px solid gray;
+  
 }
 
-@MainTextSize: 1.3rem;
+
 
 html {
   font-size: 62.5%;
@@ -15,7 +15,7 @@ html, body {
 }
 
 body {
-  max-width: 60%;
+  max-width: 800px;
   margin: 0 auto;
 
 }
@@ -54,6 +54,9 @@ p {
 
 a {
   font-size: @MainTextSize;
+  @media @phone {
+    font-size: @PhoneTextSize;
+  }
 }
 span {
   font-size: @MainTextSize;

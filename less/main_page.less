@@ -7,6 +7,9 @@ body section {
     flex-direction: column;
     background-color: lavender;
     padding: 20px;
+    @media @phone {
+        padding: 0;
+    }
 
     .blurb_container1, .blurb_container2 {
         margin: 10px auto;
@@ -17,8 +20,20 @@ body section {
         align-items: center;
         justify-content: space-between;
 
+        @media @phone {
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+        }
+
         div {
             width: 45%;
+            @media @phone {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
             
         }
         .bio {
@@ -31,13 +46,36 @@ body section {
             }
         }
     }
+    .blurb_container2 {
+        @media @phone {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+        }
+        button {
+            font-family: 'Lexend Peta', sans-serif;
+            background-color: lightgray;
+            padding: 10px 15px;
+            border-radius: 10px;
+        }
+    }
 }
 
 .brag {
     display: flex;
     justify-content: space-between;
+    @media @phone {
+        flex-direction: column;
+        align-items: center;
+    }
     div {
         width: 47%;
+        margin: 10px auto;
+        @media @phone {
+            width: 90%;
+        }
                 
     }
     .listen {
